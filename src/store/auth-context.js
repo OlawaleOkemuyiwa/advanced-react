@@ -1,0 +1,12 @@
+import React from "react";
+
+// const AuthContext = React.createContext({       //CCC12: createContext react method takes a default context data e.g an object with properties and methods as an argument(default values are optional, they're only required if the context data doesnt change and its just needed to be consumed someplaces else). The method returns an object (ContextObj) which contains 2 components(ContextObj.provider and ContextObj.consumer). We use ContextObj.provider to store the context data through its value attribute which is the context data needed in other components. ContextObj.provider is used to wrap the components that needs access to the context data e.g in this app, the isLoggedIn state is needed everywhere so the App component JSX code is wrapped with ContextObj.provider and with a value attribute set to the context data storing the state({isLoggedIn: isLoggedIn}). We get access to the stored context data in the components where its required by wrapping the JSX code of such components with ContextObj.consumer(e.g AuthContext.consumer as shown in Navigation component). Inside the ContextObj.consumer, we have a child CB function whose argument is then the context data. If a static (unchanging) default context data is set, ContextObj.provider is not needed (as provider is used to dynamically used to set context data) and the stored static context data is just consumed in which ever component it is needed. But in reality, context is used to store dynamic data which is only possible with provider 
+//     isLoggedIn: false,                           //CCC13: The context data [an obj with properties and method(s)] can also consumed in a cleaner way using useContext hook as shown in Navigation component. When such context obj data is consumed in a component. Now its properties can be accessed and its methods called in such component(s) of use.
+//     onLogout: () => {}
+//});
+
+const AuthContext = React.createContext();
+
+export default AuthContext;    
+
+//Basically we a create context. we then set the value of the context with contextObj.provider. Then contextObj.provider is then sued to wrap components that should get access to the context data. Inside of such components, the context data is accessed by useContext(contextObj)

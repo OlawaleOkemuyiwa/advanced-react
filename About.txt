@@ -1,0 +1,1 @@
+UseEffect for side effects code, useReducer for more complex state keeping/update and Context Api to forward data from the component it is generated and consuming with useContext
